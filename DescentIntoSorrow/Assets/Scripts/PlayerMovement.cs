@@ -12,7 +12,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    public static bool hasKey = false;
 
+    private void Start()
+    {
+        hasKey = false;
+    }
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
